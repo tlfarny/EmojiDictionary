@@ -62,8 +62,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a lovely Church" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhv-pq-dA8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a lovely Church" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhv-pq-dA8">
                                 <rect key="frame" x="102" y="393" width="171" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYI-A3-unS">
+                                <rect key="frame" x="150" y="434" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Creation Date:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHD-a4-Y5N">
+                                <rect key="frame" x="132.5" y="475" width="110" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -71,13 +83,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="kHD-a4-Y5N" firstAttribute="top" secondItem="bYI-A3-unS" secondAttribute="bottom" constant="20" id="A8L-OB-RRn"/>
                             <constraint firstItem="Uhv-pq-dA8" firstAttribute="top" secondItem="Ex9-0p-Fcv" secondAttribute="bottom" constant="50" id="GlQ-as-mPt"/>
+                            <constraint firstItem="bYI-A3-unS" firstAttribute="top" secondItem="Uhv-pq-dA8" secondAttribute="bottom" constant="20" id="LZx-gF-IiZ"/>
                             <constraint firstItem="Ex9-0p-Fcv" firstAttribute="top" secondItem="FXd-H3-Ocg" secondAttribute="bottom" constant="40" id="NI8-El-Jrl"/>
                             <constraint firstItem="Uhv-pq-dA8" firstAttribute="centerX" secondItem="xI1-EM-y19" secondAttribute="centerX" id="dlX-6k-bBd"/>
                             <constraint firstItem="Ex9-0p-Fcv" firstAttribute="centerX" secondItem="xI1-EM-y19" secondAttribute="centerX" id="eWU-Z9-5JJ"/>
+                            <constraint firstItem="bYI-A3-unS" firstAttribute="centerX" secondItem="xI1-EM-y19" secondAttribute="centerX" id="j0q-CR-8q7"/>
+                            <constraint firstItem="kHD-a4-Y5N" firstAttribute="centerX" secondItem="xI1-EM-y19" secondAttribute="centerX" id="s0H-EW-GUa"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="categoryLabel" destination="bYI-A3-unS" id="rdV-Eh-QLu"/>
+                        <outlet property="creationLabel" destination="kHD-a4-Y5N" id="B5c-oc-2YQ"/>
                         <outlet property="definitionLabel" destination="Uhv-pq-dA8" id="zWh-M8-gTs"/>
                         <outlet property="emojiLabel" destination="Ex9-0p-Fcv" id="WSO-J9-4Rw"/>
                     </connections>
